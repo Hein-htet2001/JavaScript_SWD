@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        
+        let obj={
+            name:"Hein Htet Zaw",
+            age:20,
+            job:"Web Devevloper",
+            Myself:function(name,age,job){
+                return`My name is ${name} ${this.GetBdYear(age)} and I'm work as ${this.GetJob(job)}`
+            },
+            GetBdYear:function(age){
+                let now=2020;
+                return `I was born in ${now-age} ` ;
+            },
+            GetJob:function(job){
+                    return job;
+            }
+            
+         }
+
+            let b=document.body;
+         let c=document.createElement("div")
+        b.appendChild(c)
+        let e=document.createTextNode('Hello')
+        c.appendChild(e)
+
+
+        function final(input) {
+            return `You was born in ${input}`
+        }
+        function s(x) {
+          return final(x)
+        }
+       
+      
+        // class me{
+        //     name="Hein HTet Zaw";
+        //     age=12;
+        //     introduction(){
+        //         return`My Name is  ${this.name} and i'm ${this.age} years old`;
+        //     }
+        // };
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+        let arr=["apple","Orange","Banana"]
+            let x={name:"Hein Htet Zaw",Age:20,job:null,
+            show:function(){
+                console.log(`Mu name is ${this.name}`)
+            }
+        }
+            try{
+                console.log("this is first")
+                console.log("this is first")
+                console.log("this is first")
+                // aa();
+                
+                if(x.job){
+                   console.log(x)
+                }else{
+                    throw new SyntaxError('null job')
+                }
+               
+            }catch(er){
+                    console.error(er.message)
+            }finally{
+                console.log("this the end")
+            }
+          
+        </script>
+    </body>
+    </html>

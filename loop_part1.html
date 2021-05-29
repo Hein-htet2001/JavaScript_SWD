@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        border-collapse: collapse;
+        margin: 40px 40px 
+        ;
+    }
+    tr td{
+        border: 1px solid black;
+        padding: 15px;
+        
+    }
+    .dark{
+        background-color: rgba(53, 49, 49, 0.411);
+    }
+    .color{
+        background-color: aquamarine;
+    }
+</style>
+<body>
+    <table >
+        <tbody id="body"></tbody>
+    </table>
+
+    <script>
+        for(i=10;i>=1;i--){
+            let star=""
+            for(x=1;x<=i;x++){
+                star +="#";
+            }
+            // window.prompt(star)
+            console.log(star)
+        }
+        let table=document.getElementById("body");
+        for(i=1;i<=8;i++)
+        {
+            let td=""
+            if(i%2 !=0)
+            {
+                for(x=1;x<=8;x++)
+                {
+                if(x%2 !=0){
+                    td +=`<td></td>`
+                }
+                else{
+                    td +=`<td class="color"></td>`
+                }
+               
+               
+            }
+            }else
+            {
+                for(x=1;x<=8;x++)
+              {
+                if(x%2 !=0)
+                {
+                    td +=`<td class="dark"></td>`
+                }else
+                {
+                   
+                    td +=`<td></td>`
+                }
+               
+               
+              }
+            }
+           
+           
+           table.innerHTML +=`<tr>${td}</tr>`
+        }
+        let obj={name:"Hein  Htet Zaw",age:20,Job:"Web Developer",
+                Myself:function(name,age,job){
+                    return`My Name is ${name} and I'm ${age} and then My job is ${job}`
+                }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+          list-style-type: none;
+      }
+    </style>
+</head>
+<body>
+    <!-- <p id="one">Hein Htet Zaw</p>
+    <p id="two">Live in Tar Mwe</p>
+    <ol>
+            <h1>gasd</h1>
+    </ol> -->
+        <ul id="o">hello1
+           
+        </ul>
+        <button id="v">Start</button>
+    <script>
+        let list=document.getElementById("o")
+            let btn=document.getElementById("v")
+           btn.onclick=function(){
+           g();
+      
+            
+        }
+           
+        function g() {
+            for(i=1;i<=5;i++){
+            list.innerHTML +=` <li>${i}hello</li>`
+        }
+        };
+           
+        
+    //     let body=document.body;
+    //     let he= document.createElement("h2");
+    //     let h2= document.createTextNode("History");
+    //     body.appendChild(he);
+    //     he.appendChild(h2);
+         
+
+    //     let pe=document.createElement("p");
+    //     let p=document.createTextNode("I'm web developer")
+    //     body.appendChild(pe);
+    //     pe.appendChild(p);
+
+    //     let one= document.getElementById("one")
+    //     body.insertBefore(he,one);
+
+    //     let  two = document.getElementById("two")
+    //     body.insertBefore(pe,two)
+
+
+    //    let arr=["apple","Orange","Grape","Banana"]
+    //    let output=document.querySelector("ol");
+    //    for(x in arr){
+    //        output.innerHTML +=`
+        
+    //              <li>${arr[x]}</li> 
+               
+    //        `
+    //    }
+ 
+    // let b=document.body;
+    // let h=document.createElement('h1')
+    // let p=document.createTextNode('hello')
+    // b.appendChild(h);
+    // h.appendChild(p)
+
+    // let b=document.body;
+    // let ol=document.createElement('ol');
+    // b.appendChild(ol)
+    // let l=document.createElement('li')
+    // ol.appendChild(l);
+    // let lo=document.createTextNode("Hello")
+    // l.appendChild(lo)
+
+    </script>
+</body>
+</html>

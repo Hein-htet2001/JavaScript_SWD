@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input[type]{
+        padding: 20px;
+    }
+</style>
+<body>
+    <!-- <input type="file" id="upload" multiple>
+    <ul id="show">
+
+    </ul> -->
+   <form action="" id="test" >
+    <input type="text" placeholder="First Name">
+    <input type="password" placeholder="Fill Password">
+    <br>
+    <button >register</button>
+   </form>
+   <table>
+       <thead>
+           <tr>
+               <td>NO</td>
+               <td>Name</td>
+               <td>Age</td>
+               <td>Job</td>
+           </tr>
+       </thead>
+       <tbody id="t">
+
+       </tbody>
+   </table>
+    <script>
+        // document.getElementById("upload").addEventListener("change",function () {
+        //     let file= document.getElementById("upload").files
+        //     console.log(file)
+        //     for(x of file){
+        //         console.log(x)
+        //     document.getElementById("show").innerHTML+=`<li>${x.name}</li>` 
+        // }
+        // });
+        document.getElementById("test").addEventListener("submit",function (e) {
+          e.preventDefault();
+                let x= new FormData(this);
+                x.append("JOB","Web")
+                for(let pair of x.entries()) {
+   console.log(pair[0]+ ', '+ pair[1]);
+}
+        });
+        let arr=["Hein Htet Zaw",20,"Web Developer"]
+        let tb=document.getElementById("t")
+        for(x of arr)
+        i=1;{
+            
+                tb.innerHTML +=`
+                <tr>
+                    <td>${i}</td>
+                    <td>${arr}</td>
+                    </tr>
+                `
+                i++
+        }
+    </script>
+</body>
+</html>

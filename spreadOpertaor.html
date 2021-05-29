@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //array
+    let arr=[1,2,3,4];
+    let arr2=[5,6,7,8,9]
+     let a=["first",...arr,"mid",...arr2,"mid"];
+     console.log(a)
+     //object
+     let obj={name:"HHZ"};
+     let obj2={age:20};
+     let bb={"Status ":false,...obj,...obj2,"hello":true}
+     console.log(bb)
+     let showage = (age) => {
+         let now=2021;
+         let yourage=now-age;
+         console.log(`You was born in ${yourage}`)
+     }
+     let one=(x,y)=>{
+       
+         console.log([x,y])
+     }
+     let four=(x,y=3) => {
+         let z=x*y;
+         return z
+     };
+     
+    
+</script>
+</body>
+</html>

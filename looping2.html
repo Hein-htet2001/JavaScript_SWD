@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         table{
+            border-collapse: collapse;
+            margin-left: 10px;
+        }
+        tr td{
+            border: 1px solid;
+            padding: 10px 15px;
+        }
+        tr:hover{
+            background-color: aquamarine;
+        }
+        td:nth-child(even){
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td>No</td>
+               <td>MMK</td>
+                <td>Dollar</td>
+                <td>Price</td>
+            </tr>
+          
+        </thead>
+        <tbody id="t">
+         
+        </tbody>
+    <script src="./JS/currency.js"></script>
+    <script>
+        console.log(money)
+        let country=money.rates;
+        let  tb=document.getElementById("t")
+       
+        console.log(country)
+        i=1;
+        for(x in country){
+            
+            tb.innerHTML+=
+            `
+            <tr>
+              <td>${i}</td>
+              <td>1</td>
+              <td>${x}</td>
+              <td>${country[x]}</td>
+          </tr>            `
+           
+                i++
+        }
+    </script>
+</body>
+</html>

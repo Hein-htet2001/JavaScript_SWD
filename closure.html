@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function aa() {
+            console.log('this is aa');
+            function aaa() {
+                console.log('this is aaa');
+            }
+            aaa()
+        };
+        function bb(a,b) {
+            let result=a*b;
+            function bbb(z) {
+                 console.log(`this is final result=`+z)
+            }
+            bbb(result)
+            
+        }
+        function cc(a,b) {
+                let c=a*b;
+            let input ="this is funcition name ma prr"+c;
+           return function (z) {
+                console.log(input )
+             }
+            
+            
+        }
+    </script>
+</body>
+</html>

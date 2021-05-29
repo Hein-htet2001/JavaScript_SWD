@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegation</title>
+</head>
+<body>
+    <button onclick="show()">Show List</button>
+    <ul id="ul" style="padding: 20px;">
+       Delegation
+      
+    </ul>
+  
+    <script>
+            let arr=['Apple','Orange','Strawbery','Banana','Grape'];
+            arr.sort();
+            let output=document.getElementById("ul");
+            function show() {
+                arr.map(function (el) {
+                addli(el);
+            });
+            };  
+          
+            // for(x of arr){
+            //     output.innerHTML +=`
+            //     <li>${x}</li>`
+              
+            // }
+          
+           function addli (x) {
+            let li=document.createElement("li");
+            let content=document.createTextNode(x);
+            li.appendChild(content);
+            output.appendChild(li);
+
+            //  output.innerHTML+=`
+            // <li>${arr[x]}</li>
+            
+            // `
+       };
+        let li=document.querySelectorAll("li")
+        // li.forEach(function (x) {
+            
+        //     x.addEventListener("click",function () {
+        //         console.log(x.innerHTML)
+        //     })
+            
+        // })
+        output.addEventListener('click',function (e) {
+            let current= e.target;
+            console.log(current.innerHTML)
+        })
+    </script>
+</body>
+</html>

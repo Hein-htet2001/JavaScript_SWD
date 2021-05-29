@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in">
+    <ul id="ul1">
+
+    </ul>
+    <script>
+        let input=document.getElementById("in");
+        let list=document.getElementById("ul1");
+        let id=1;
+
+        if(localStorage.length>0){
+            id=localStorage.length++;
+            
+        };
+        function addlist(x) {
+            let l=document.createElement("li");
+            let le=document.createTextNode(x);
+            list.appendChild(l);
+            l.appendChild(le);
+            input.value="";
+         };
+        function save(x) {
+            localStorage.setItem(id,x);
+            id++;
+           
+        };
+        document.addEventListener("keyup",function (e) {
+            if(e.keyCode===13){
+                let note=input.value;
+                addlist(note)
+                save(note);
+                 console.log(note)
+            }
+           
+        });
+        function showstorage() {
+           let k=Object.keys(localStorage);
+           k.sort();
+           console.log(k)
+           k.map(function (el) {
+                addlist(localStorage.getItem(el))
+            })
+        };
+        showstorage();
+        // let mine={
+        //     name:"Hein Htet Zaw",
+        //     age:20,
+        //     job:"Web Developer",
+
+        // }
+    </script>
+</body>
+</html>

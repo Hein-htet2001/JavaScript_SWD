@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .news{
+            width: 80%;
+            margin: 100px auto;
+            columns: 3 150px;
+             background: bisque ;
+        }
+        .card{
+                width: 100%;
+            background: gray ;
+            padding: 15px
+        ;
+        }
+        .card-img{
+            width: 100%;
+
+        }
+        .aruthor{
+
+        }
+        .head{
+
+        }
+        .content{
+                    padding: 5px;
+            color: black;
+        }
+        .link{
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="news" id="one">
+
+</div>
+    <script src="./JS/news.js"></script>
+    <script>
+
+        let news= paper.articles;
+        console.log(news)
+         let art=document.getElementById("one")
+        news.map(function (el,index) {
+                console.log(el)
+                art.innerHTML+=`
+                        <div class="news" id="one">
+                            <div class="card">
+                                <img class="card-img" src="${el.urlToImage}" alt="">
+                                <small class="aruthor">${el.author}</small>
+                                <h4 class="head"> ${el.title}</h4>
+                                <p class="content">${el.description}</p>
+                                <a class="link" href="${el.url}">Read More</a>
+            
+                            </div>
+                </div>
+            
+                `
+            
+            })
+    
+        // for(x of news){
+        //     console.log(x)
+        //     art.innerHTML+=`
+        //     <div class="news" id="one">
+        //                   <div class="card">
+        //                  <img class="card-img" src="${x.urlToImage}" alt="">
+        //                 <small class="aruthor">${x.author}</small>
+        //                   <h4 class="head"> ${x.title}</h4>
+        //                   <p class="content">${x.description}</p>
+        //                   <a class="link" href="${x.url}">Read More</a>
+
+        //          </div>
+        //    </div>
+        //     `
+        // }
+
+    </script>
+ 
+</body>
+</html>

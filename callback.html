@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="one">Click</button>
+    <button id="two">Click</button>
+    
+    <script>
+       document.getElementById("one").addEventListener("click",function () {
+        function bb(c) {
+           console.log(`This is CallBack function`+c)
+        };
+        function aa(x,y,zz) {
+            let z=x%y;
+            zz(z);
+        };
+       aa(2,2,bb);
+      
+       })
+     
+        document.getElementById("two").addEventListener("click",function () {
+                function callback(pro) {
+                    let name=prompt("Enter Your Name");
+                    pro(name)
+                 }
+                 callback(c)
+                 function c(q) {
+                     alert(`Min Ga Lr Pr`+  q)
+                 }
+        });
+    </script>
+</body>
+</html>

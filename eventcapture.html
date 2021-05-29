@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .out{
+                background-color: gainsboro;
+                width: 291px;
+                height: 100px;
+                border: 1px solid;
+                margin: 20px auto;
+        }
+        .mid{
+            background-color: gainsboro;
+            border: 1px solid;
+            margin: 15px;
+            width: 250px;
+            height: 65px;
+        }
+        .inner{
+            background-color: gainsboro;
+            border: 1px solid;
+            margin: 10px -16px 10px 22px;
+            width: 202px;
+            height: 40px;
+        }
+        div:hover{
+            background-color: gold;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="out"id="one" >
+        <div class="mid"id="two" >
+            <div class="inner" id="three" >
+
+            </div>
+        </div>
+    </div>
+    <script>
+         document.getElementById("one").addEventListener("click",function () {
+             run(`Outer `)
+         },true);
+         document.getElementById("two").addEventListener("click",function () {
+             run(`middle `)
+         },true);
+         document.getElementById("three").addEventListener("click",function () {
+             run(`inner `)
+         },true );
+        function run(a) {
+            return console.log(`I'm ${a}layer`)
+        }
+    </script>
+</body>
+</html>

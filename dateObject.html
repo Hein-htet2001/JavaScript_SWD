@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 25px;
+            box-sizing: border-box;
+        }
+        /* #output{
+            border: 2px solid sandybrown;
+            width: 123px;
+              padding: 10px 5px;
+        } */
+        h1::before{
+            content: "miN";
+        }
+    </style>
+</head>
+<body>
+    <p id="output"></p>
+    <h1>Hello</h1>
+    <script>
+        let d= new Date();
+        let output1= document.getElementById("output");
+        output1.innerHTML +=`${d.getHours()}: ${d.getMinutes()}: ${d.getSeconds()}: ${d.getUTCMilliseconds()}`
+         output1.innerHTML+=`<br>${d.toDateString()}`
+
+    </script>
+</body>
+</html>

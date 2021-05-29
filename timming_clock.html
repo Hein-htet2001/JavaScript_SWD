@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #two{
+            border: 2px solid;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p id="two"></p>
+    <button id="Start" >Start</button>
+    <button id="stop" onclick="cl()">Stop</button>
+    <p id="o"></p>
+    <script>
+       
+        let clock=document.getElementById("two");
+        function showtime()
+         {
+            let time= new Date();
+            clock.innerHTML =`${time.toDateString()} `
+        }
+        let run=setInterval(showtime,1000);
+        
+        function cl() 
+        {
+        clearInterval(run);
+            }
+    //   function btn()
+    //         {
+    //             console.log(`fsdf`)
+                
+
+    //         }
+    let clock1=document.getElementById("o");
+    let t=new Date();
+    clock1.innerHTML=`${t.toDateString()}`
+
+
+       
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* margin: 0;
+            padding: 0; */
+        }
+            .body{
+                    border: 5px solid skyblue;
+                    border-radius: 20px;
+                    width: 400px;
+                    margin: 20px;
+                    background-color: lightblue;
+            }
+            .body:hover{
+                    background-color: khaki;
+            }
+        li{
+            color: black;
+            /* font-size: medium; */
+            font-weight: bolder;
+            padding: 10px;
+            border: 1px solid purple;
+            width: 185px;
+            margin: 21px;
+            background-color: slategray;
+        }
+    li:hover{
+            background-color: rgb(91, 161, 89);
+            transition: 1s;
+        }
+        button{
+            margin: 5px;
+        }
+        .input{
+            margin-left: 71px;
+            margin-top: 10px;
+            /*float: left;*/
+
+        }
+        .u{
+            margin-left:10px ;
+        }
+      #two{
+          width: 30px;
+          border-radius: 10px;
+          border: 1px solid olivedrab;
+          padding: 5px;
+          margin-left: -52px;
+          margin-top: 10px;
+          margin-right: 20px;
+          /*padding: 20px;*/
+      }
+        .h{
+            outline: none;
+            /*border-radius: 21px;*/
+            background: olivedrab;
+        }
+        .h:hover{
+            border-left-width: 10px;
+          border-left-color: crimson;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="body" id="bd">
+        <div class="input">
+            <spam  id="two"></spam>
+            <input type="text" id="in" class="h">
+
+            <button onclick="btn()">Add</button>
+
+         </div>
+         <ol id="u" class="u">
+         
+         </ol>
+    </div>
+
+
+
+
+
+    <script>
+        let clock=document.getElementById("two")
+        function show1(){
+            let d= new Date();
+            clock.innerHTML =`${d.getDate()}:${d.getMonth()}:${d.getFullYear()}`;
+        }
+        setTimeout(show1,1000);
+
+        // let clock=document.getElementById("two");
+        // function showtime()
+        // {
+        //     let time= new Date();
+        //     clock.innerHTML =`${time.getHours()}:${time.getMinutes()}: ${time.getSeconds( )} `
+        // }
+        // setInterval(show1,1000);
+
+
+                let minlengthcount=3;
+                let inputtext1=document.getElementById('in');
+                let list=document.getElementById("u");
+                 let  i=1;
+
+            //  function ka nay return pyn pe lote tr
+            function edit(te) {
+                list.innerHTML +=` <li class="lo" id="ul-li${i}">
+                <button id="btn-del" onclick='delList(${i})'>Delete</button>
+                <button  id="btn-ed" onclick='editlist(${i})'>Edit</button>
+                <span id="listText4 ${i}">${te}</span>
+                    </li>`;
+                    i++
+            }
+            function btn(){
+                let inputtext=tfilter(inputtext1.value);
+
+                   if(inputtext){
+                      edit(inputtext)
+                    // inputtext1.value="";
+                //      list.innerHTML += `
+                //     <li class="lo" id="ul-li${i}">
+                //   <button id="btn-del${i}">Delete</button>
+                // <button id="btn-ed${i}" >Edit</button>
+                // <span >${inputtext}</span>
+                //     </li>`;
+                //     i++;
+                //  inputtext1.value="";
+                   }
+             };
+             function tfilter(x){
+                if(x)
+             {  if(x.length>=minlengthcount){
+                 return x
+             }
+             else{
+                 return false
+             }
+               }
+          else{
+              return false;
+           }
+             }
+             function delList(listId) {
+                let current=document.getElementById(`ul-li${listId}`);
+                let delete1=document.getElementById(`listText4 ${listId}`).innerHTML; 
+                let decomfirm= confirm(`are you sure want to delete "${delete1}"? ` )
+                  if(decomfirm){
+                    list.removeChild(current)
+                }else{
+                    console.log(`Not Now`)
+                }
+             }
+             function editlist(listId) {
+                let editcomfirm=document.getElementById(`listText4 ${listId}`); 
+                let  newText=prompt(`Say SomeThing `,editcomfirm.innerHTML);
+               if(tfilter(newText)){
+                editcomfirm.innerHTML= newText;
+               }
+             };
+            
+    </script>
+</body>
+</html>
